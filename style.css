@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #293447;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.game-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.menu button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #44576c;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.menu button:hover {
+  background: #5a728a;
+}
+
+.pause-btn {
+  margin-left: auto;
+  background: #c0392b;
+  color: #fff;
+}
+
+
+.play-board {
+  flex: 1;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  background: #1f2d40;
+  position: relative;
+  border-radius: 5px;
+}
+
+.food {
+  background: radial-gradient(circle, #ff4d4d, #ff0000);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff0000, 0 0 20px #ff4d4d;
+}
+
+.head {
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 242, 96, 0.6), 0 0 15px rgba(5, 117, 230, 0.6);
+  transition: transform 0.1s ease;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #212837;
+}
+
+.controls i {
+  font-size: 1.5rem;
+  color: #b8c6dc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.controls i:hover {
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 90vmin;
+  }
+  .game-details {
+    font-size: 1rem;
+  }
+}
